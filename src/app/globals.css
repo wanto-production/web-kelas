@@ -41,6 +41,13 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --color-ctp-bg: #f5e0dc;
+  --color-ctp-surface: #f2cdcd;
+  --color-ctp-text: #4c4f69;
+  --color-ctp-subtext: #6c6f85;
+  --color-ctp-accent: #7287fd;
+  --color-ctp-accent2: #8839ef;
 }
 
 :root {
@@ -110,12 +117,20 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+
+  --color-ctp-bg: #1e1e2e;
+  --color-ctp-surface: #181825;
+  --color-ctp-text: #cdd6f4;
+  --color-ctp-subtext: #a6adc8;
+  --color-ctp-accent: #b4befe;
+  --color-ctp-accent2: #cba6f7;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 transition-colors;
   }
+
   body {
     @apply bg-background text-foreground;
   }
