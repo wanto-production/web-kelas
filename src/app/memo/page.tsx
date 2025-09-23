@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import BlurText from "@/components/BlurText";
+import BlurText from "@/components/react-bits/BlurText";
 import background from "@/assets/background.png";
-import { GalleryContainer } from "@/components/image-container";
-import { ActivitiesTimeline } from "@/components/activities";
+import { GalleryContainer } from "@/components/memo/image-container";
+import { ActivitiesTimeline } from "@/components/memo/activities";
 import { FaImage } from "react-icons/fa";
 import { FaMapMarkedAlt } from "react-icons/fa";
 

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FaBars, FaGithub } from "react-icons/fa";
 import logo from "@/assets/favicon.png"; // favicon kamu
 import { FaXmark } from "react-icons/fa6";
-import ThemeToggle from "./theme-togle";
+import ThemeToggle from "./themes/theme-togle";
 
 interface Pages {
   href: string,
@@ -18,7 +18,8 @@ export default function Header() {
   const pages: Pages[] = [
     { href: '/', text: "Home" },
     { href: '/about', text: "About" },
-    { href: '/memo', text: "Memories" }
+    { href: '/memo', text: "Memories" },
+    { href: '/contact', text: "Contact" }
   ]
 
   return (

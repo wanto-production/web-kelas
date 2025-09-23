@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import logo from "@/assets/background.png";
 import { FaGithub } from "react-icons/fa";
-import BlurText from "@/components/BlurText";
-import CircularText from "@/components/CircularText";
+import BlurText from "@/components/react-bits/BlurText";
+import CircularText from "@/components/react-bits/CircularText";
 import Link from "next/link";
 
 export const metadata: Metadata = {

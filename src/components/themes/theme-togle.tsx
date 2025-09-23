@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { useTheme } from "next-themes";
-import { Skeleton } from "./ui/skeleton";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();

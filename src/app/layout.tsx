@@ -3,7 +3,7 @@ import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import Header from "@/components/header";
-import { Providers } from "@/components/theme-provider";
+import { Providers } from "@/components/themes/theme-provider";
 
 const poppins = Poppins({
   weight: ["600", "700"], // buat heading tegas

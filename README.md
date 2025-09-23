@@ -20,6 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Variables
+
+Create a `.env` file based on `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Then set up the required environment variables:
+
+- `RESEND_API_KEY`: Get your API key from [Resend](https://resend.com/api-keys)
+
+## Email Setup
+
+This project uses React Email for creating email templates:
+
+1. Email templates are located in `src/components/emails/`
+2. The contact form sends emails using Resend
+3. Two emails are sent on form submission:
+   - Notification to the site owner
+   - Confirmation to the sender
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

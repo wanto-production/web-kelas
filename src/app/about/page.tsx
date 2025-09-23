@@ -4,7 +4,7 @@ import Link from "next/link";
 import logo from "@/assets/background.png";
 import { FaGraduationCap, FaUsers, FaTrophy, FaHeart, FaGithub, FaHome } from "react-icons/fa";
 import { MdSchool, MdLocationOn, MdCalendarToday } from "react-icons/md";
-import BlurText from "@/components/BlurText";
+import BlurText from "@/components/react-bits/BlurText";
 
 export const metadata: Metadata = {
   title: "Tentang Kelas 8.10",

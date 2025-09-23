@@ -2,7 +2,7 @@
 
 import { motion, useAnimation, useInView } from 'motion/react';
 import { useEffect, useRef } from 'react';
-import TrueFocus from './TrueFocus';
+import TrueFocus from '@/components/react-bits/TrueFocus';
 
 interface Activity {
   year: string;
