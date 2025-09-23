@@ -21,6 +21,7 @@ export const Footer: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Memories', href: '/memo' },
+    { name: "Contact", href: '/contact' }
   ];
 
   const techStack = ['JavaScript', 'TypeScript', 'React', 'NextJs', 'Bun'];
