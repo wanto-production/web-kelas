@@ -7,8 +7,19 @@ import logo from "@/assets/favicon.png"; // favicon kamu
 import { FaXmark } from "react-icons/fa6";
 import ThemeToggle from "./theme-togle";
 
+interface Pages {
+  href: string,
+  text: string
+}
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const pages: Pages[] = [
+    { href: '/', text: "Home" },
+    { href: '/about', text: "About" },
+    { href: '/memo', text: "Memories" }
+  ]
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl flex flex-col items-center z-50">
@@ -28,12 +39,9 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8 font-inter text-[var(--color-ctp-subtext)] text-sm">
-          <Link href="/" className="hover:text-[var(--color-ctp-text)] transition">Home</Link>
-          <Link href="/info" className="hover:text-[var(--color-ctp-text)] transition">Info</Link>
-          <Link href="/tugas" className="hover:text-[var(--color-ctp-text)] transition">Tugas</Link>
-          <Link href="/jadwal" className="hover:text-[var(--color-ctp-text)] transition">Jadwal</Link>
-          <Link href="/galeri" className="hover:text-[var(--color-ctp-text)] transition">Galeri</Link>
-          <Link href="/kontak" className="hover:text-[var(--color-ctp-text)] transition">Kontak</Link>
+          {pages.map(({ href, text }, i) => (
+            <Link key={i} href={href} className="hover:text-[var(--color-ctp-text)] transition">{text}</Link>
+          ))}
         </nav>
 
         <div className="flex gap-2 items-center">
@@ -76,12 +84,9 @@ export default function Header() {
             : "opacity-0 scale-95 invisible pointer-events-none"
           }`}
       >
-        <Link href="/" className="text-[var(--color-ctp-subtext)] hover:text-[var(--color-ctp-text)] font-medium">Home</Link>
-        <Link href="/info" className="text-[var(--color-ctp-subtext)] hover:text-[var(--color-ctp-text)] font-medium">Info</Link>
-        <Link href="/tugas" className="text-[var(--color-ctp-subtext)] hover:text-[var(--color-ctp-text)] font-medium">Tugas</Link>
-        <Link href="/jadwal" className="text-[var(--color-ctp-subtext)] hover:text-[var(--color-ctp-text)] font-medium">Jadwal</Link>
-        <Link href="/galeri" className="text-[var(--color-ctp-subtext)] hover:text-[var(--color-ctp-text)] font-medium">Galeri</Link>
-        <Link href="/kontak" className="text-[var(--color-ctp-subtext)] hover:text-[var(--color-ctp-text)] font-medium">Kontak</Link>
+        {pages.map(({ href, text }, i) => (
+          <Link key={i} href={href} className="text-[var(--color-ctp-subtext)] hover:text-[var(--color-ctp-text)] font-medium">{text}</Link>
+        ))}
         <a
           href="https://github.com/wanto-production"
           target="_blank"

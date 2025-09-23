@@ -4,6 +4,7 @@ import logo from "@/assets/background.png";
 import { FaGithub } from "react-icons/fa";
 import BlurText from "@/components/BlurText";
 import CircularText from "@/components/CircularText";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "home"
@@ -48,12 +49,12 @@ export default function Page() {
 
       {/* CTA */}
       <div className="mt-8 flex flex-wrap gap-4 justify-center">
-        <a
-          href="/info"
+        <Link
+          href="/about"
           className="min-w-[150px] px-6 py-2 rounded-xl bg-[var(--color-ctp-accent)] text-[var(--color-ctp-surface)] font-medium shadow-md hover:scale-105 transition-all"
         >
-          Lihat Info
-        </a>
+          Tentang kami
+        </Link>
         <a
           href="https://github.com/wanto-production"
           target="_blank"
