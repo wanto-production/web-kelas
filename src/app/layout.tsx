@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     default: "Kelas 8.10 - Website Resmi Siswa SMP"
   },
   description:
-    "Website resmi Kelas 8.10 SMP. Portal informasi siswa, pengumuman, tugas, jadwal pelajaran, galeri kegiatan, dan komunikasi antar siswa kelas 8.10.",
+    "Website resmi Kelas 8.10 SMP 3 cikarang utara.",
   keywords: [
     // Kelas & Sekolah
     "kelas 8.10",
