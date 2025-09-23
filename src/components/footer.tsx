@@ -19,11 +19,8 @@ export const Footer: React.FC = () => {
 
   const quickLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Siswa', href: '/students' },
-    { name: 'Tugas', href: '/assignments' },
-    { name: 'Jadwal', href: '/schedule' },
-    { name: 'Galeri', href: '/gallery' },
-    { name: 'Pengumuman', href: '/announcements' }
+    { name: 'About', href: '/about' },
+    { name: 'Memories', href: '/memo' },
   ];
 
   const techStack = ['JavaScript', 'TypeScript', 'React', 'NextJs', 'Bun'];
@@ -34,13 +31,14 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gradient-to-b from-[#1e1e2e] to-[#181825] border-t border-[#313244]">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+
           {/* Brand Section */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-[#b4befe] to-[#89b4fa] rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-[#b4befe] to-[#89b4fa] rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-[#1e1e2e] font-bold text-lg">8.10</span>
               </div>
               <div>
@@ -49,13 +47,12 @@ export const Footer: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-[#cdd6f4] leading-relaxed max-w-md">
-              Website resmi Kelas 8.10 SMP. Portal informasi siswa untuk tugas, pengumuman,
-              jadwal pelajaran, dan kegiatan kelas. Dibuat dengan 💜 oleh siswa untuk siswa.
+            <p className="text-[#cdd6f4] leading-relaxed text-sm sm:text-base">
+              Website resmi Kelas 8.10 SMPN 3 cikarang utara. Dibuat dengan 💜 oleh siswa untuk siswa.
             </p>
 
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 pt-2">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -79,13 +76,13 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
+                  <Link
                     href={link.href}
-                    className="text-[#a6adc8] hover:text-[#b4befe] transition-colors duration-200 flex items-center group"
+                    className="text-[#a6adc8] hover:text-[#b4befe] transition-colors duration-200 flex items-center group text-sm"
                   >
                     <span className="w-1 h-1 bg-[#b4befe] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -98,7 +95,7 @@ export const Footer: React.FC = () => {
               {techStack.map((subject) => (
                 <span
                   key={subject}
-                  className="px-3 py-1 bg-[#313244] text-[#a6adc8] text-sm rounded-full hover:bg-[#b4befe]/20 hover:text-[#cdd6f4] transition-all duration-200 cursor-default"
+                  className="px-2.5 py-1 bg-[#313244] text-[#a6adc8] text-xs sm:text-sm rounded-full hover:bg-[#b4befe]/20 hover:text-[#cdd6f4] transition-all duration-200 cursor-default whitespace-nowrap"
                 >
                   {subject}
                 </span>
@@ -106,16 +103,16 @@ export const Footer: React.FC = () => {
             </div>
 
             {/* Status */}
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-[#a6e3a1] rounded-full animate-pulse"></div>
-              <span className="text-sm text-[#a6adc8]">32 Siswa Aktif</span>
+            <div className="flex items-center space-x-2 pt-2">
+              <div className="w-2 h-2 bg-[#a6e3a1] rounded-full animate-pulse flex-shrink-0"></div>
+              <span className="text-xs sm:text-sm text-[#a6adc8]">32 Siswa Aktif</span>
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="py-6 border-t border-[#313244] flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center space-x-2 text-[#a6adc8] text-sm">
+        <div className="py-6 border-t border-[#313244] flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-1 text-[#a6adc8]">
             <span>&copy; {currentYear} Kelas 8.10.</span>
             <span>Made with</span>
             <span className="text-[#f5c2e7] animate-pulse">💜</span>
@@ -123,27 +120,19 @@ export const Footer: React.FC = () => {
             <span className="text-[#b4befe] font-medium">Ikhwan Satrio</span>
           </div>
 
-          <div className="flex items-center space-x-6 text-sm">
-            <Link href="/privacy" className="text-[#a6adc8] hover:text-[#b4befe] transition-colors">
-              Aturan Kelas
-            </Link>
-            <Link href="/contact" className="text-[#a6adc8] hover:text-[#b4befe] transition-colors">
-              Kontak Wali Kelas
-            </Link>
-            <div className="flex items-center space-x-1 text-[#a6adc8]">
-              <span>Built with</span>
-              <span className="text-[#b4befe] font-medium">Next.js</span>
-            </div>
+          <div className="flex items-center space-x-2 text-[#a6adc8]">
+            <span>Built with</span>
+            <span className="text-[#b4befe] font-medium">Next.js</span>
           </div>
         </div>
 
         {/* Scroll to Top Button */}
         <button
           onClick={handleScrollToTop}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-[#b4befe] to-[#89b4fa] text-[#1e1e2e] rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 z-50 group"
+          className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-[#b4befe] to-[#89b4fa] text-[#1e1e2e] rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 z-50 group flex items-center justify-center"
           aria-label="Scroll to top"
         >
-          <svg className="w-6 h-6 mx-auto group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4 sm:w-6 sm:h-6 mx-auto group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
           </svg>
         </button>

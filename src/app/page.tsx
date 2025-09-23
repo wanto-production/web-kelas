@@ -7,7 +7,7 @@ import CircularText from "@/components/CircularText";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "home"
+  title: "8.10 | home"
 };
 
 export default function Page() {
