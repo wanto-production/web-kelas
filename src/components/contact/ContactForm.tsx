@@ -139,7 +139,7 @@ export function ContactForm() {
                 Kirim Pesan
               </h2>
               <p className="text-[var(--color-ctp-subtext)] text-base sm:text-lg">
-                Isi formulir ini
+                Isi formulir ini untuk hubungi saya
               </p>
             </div>
 
